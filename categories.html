@@ -1,0 +1,169 @@
+<!DOCTYPE Html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AlphaCMS: Categories</title>
+
+		<!-- Boostrap core CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+		<!-- Custom Styles for this template -->
+		<link rel="stylesheet" href="babar.css">
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+      <nav class="container-flude">
+	      	<div class="navbar navbar-expand-lg">
+	      		<div class="navbar-header">
+	      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapes" data-target="#navbarColor01" aria-controls="navbarColor01">
+	      				<span class="icon-bar"></span>
+	      				<span class="icon-bar"></span>
+	      				<span class="icon-bar"></span>
+	      			</button>
+	      			<a href="#" class="navbar-brand">AlphaCMS</a>
+	      		</div>
+	      		<div class="navbar-collapes collapes navbar-responsive-collapes">
+	      			<ul class="nav navbar-nav">
+	      				<li><a class="active" href="./boostrap.html">Dashboard</a></li>
+	      				<li><a href="./pages.html">Pages</a></li>
+	      				<li><a href="./categories.html">Categories</a></li>
+	      				<li><a href="./users.html">Users</a></li>
+	      				
+	      			</ul>
+	      			<form class="navbar-form navbar-left">
+	      				<input type="text" class="form-control col-lg-8" placeholder="search">
+	      			</form>
+	      			<div style="padding-right: 12px;">
+	      				<ul class="nav navbar-nav navbar-right">
+	      				<li class="dropdown">
+	      					<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Acount <b class="caret">
+	      						
+	      					</b></a>
+	      					<ul class="dropdown-menu">
+	      						<li><a href="#">Profiles</a></li>
+	      					</ul>
+	      				</li>
+	      				<li><a href="./login.html">Logout</a></li>
+	  
+	      			</ul>
+	      			</div>
+	      		</div>
+	      	</div>
+      	</nav>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="list-group">
+					  <a href="./boostrap.html" class="list-group-item">
+					   <i class="glyphicon glyphicon-dashboard active"> Dashboard</i>
+					  </a>
+					  <a href="./pages.html" class="list-group-item"><i class="fa fa-file"> Pages</i></a>
+					  <a href="./categories.html" class="list-group-item active"><i class="glyphicon glyphicon-folder-open"> Categories</i></a>
+					  <a href="./users.html" class="list-group-item"><i class="fa fa-user"> User Account</i></a>
+					</div>
+				</div>
+				<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-6">
+						<h1 class="page-header"><i class="glyphicon glyphicon-file"> Categories</i></h1>
+					</div>
+					<div class="col-md-6">
+						<div class="btn-group actions" role="group" aria-label="...">
+						  <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> New</a>
+						  <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+						  <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Delete</a>
+						</div>
+					</div>
+				</div>
+
+				<ol class="breadcrumb">
+				  <li><a href="./boostrap.html">Dashboard</a></li>
+				  <li class="active">Categories</li>
+				</ol>
+					
+					<table class="table table-striped">
+					    <thead>
+						<tr>
+						    <th><input type="checkbox"></th>
+							<th>Category Title <i class="glyphicon glyphicon-chevron-down"></i></th>
+						<tr>
+						</thead>
+						<tbody>
+						    <td><input type="checkbox"></td>
+							<td><a href="./category.html">Sample category one</a></td>
+						</tr>
+						<tr>
+						    <td><input type="checkbox"></td>
+							<td><a href="./category.html">Sample category two</a></td>
+						</tr>
+						<tr>
+						    <td><input type="checkbox"></td>
+							<td><a href="./category.html">Sample category three</a></td>
+						</tr>
+						</tbody>
+						
+					</table>
+
+					<nav aria-label="Page navigation">
+					  <ul class="pagination">
+					    <li>
+					      <a href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					      </a>
+					    </li>
+					    <li><a href="#">1</a></li>
+					    <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li>
+					      <a href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>Copyright 2015, All Rights Reserved</p>
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+	============================================================================-->
+	<!-- Placed at the end of the document so the pages load faster-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/tablesorter.jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+		$(function(){
+			$('sort-table').tablesorter({
+				sortlist:[[0,0],[1,0]]
+			});
+		});
+	</script>
+	<script>
+		var $rows = $('table tr');
+		$('.search-form').keyup(function() {
+			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+			$rows.show().filter(function(){
+				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+				return !~text.indexOf(val);
+			}).hide();
+		});
+	</script>
+		
+	</body>
+</html>
