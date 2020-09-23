@@ -12,7 +12,7 @@ section{
 }
 
 .navbar {
-	background: darkblue;
+	background: #4ba6d0;
 	border-radius: 0;
 }
 
@@ -31,4 +31,9 @@ footer{
 
 .tablesorter th{
 	cursor: pointer;
+}
+
+#page
+{
+	color: #fff;
 }
